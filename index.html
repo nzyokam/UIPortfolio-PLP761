@@ -1,14 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UIPortfolio-PLP761</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<!-- Add you work her in order, it should labelled and arranged neatly PLEASE. use comments to guide you work flow -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+  </head>
+  <body>
+    <div class="container">
+    <header class="navbar">
+      <div class="logo">
+        <img src="images/logo.png"/><p>UI Portfolio</p>
+    </div>
+      <nav>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+          
+<!-- Blog Dropdown -->
+<li class="select">
+    <div class="selected">
+      Blog
+      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" class="arrow">
+        <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
+      </svg>
+    </div>
+    <div class="options">
+      <div class="option">Latest Posts</div>
+      <div class="option">Categories</div>
+      <div class="option">Single Post</div>
+    </div>
+  </li>
+
+  <!-- Pages Dropdown -->
+  <li class="select">
+    <div class="selected">
+      Pages
+      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" class="arrow">
+        <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
+      </svg>
+    </div>
+    <div class="options">
+      <div class="option">About Me</div>
+      <div class="option">Portfolio</div>
+      <div class="option">FAQ</div>
+    </div>
+  </li>
+          
+            <li><a href="#">Contact</a></li>
+            <li><button class="hire-btn">Hire Me</button></li>
+          </ul>
+          
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Hi, I'm John Watson</h1>
+        <h2><span class="highlight">Web Dev</span></h2>
+        <p>
+          I love Graphic design and Photography and have been working on my
+          portfolio since 2016. I can give your business a new Creative start
+          right away!
+        </p>
+        <div class="hero-buttons">
+          <button class="hire-me">Hire Me</button>
+          <button class="portfolio">My Portfolio</button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/watson.png" alt="John Watson" />
+      </div>
+    </section></div>
 
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
