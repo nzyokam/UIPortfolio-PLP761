@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/section5.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
       rel="stylesheet"
@@ -58,11 +59,13 @@
             </button>
             <div class="menu">
               <ul>
-                <li onclick="hideSideBar()"><a href="#">Home</a></li>
-                <li onclick="hideSideBar()"><a href="#">About</a></li>
-                <li onclick="hideSideBar()"><a href="#">Services</a></li>
+                <li onclick="hideSideBar()"><a href="#Home">Home</a></li>
+                <li onclick="hideSideBar()"><a href="#About">About</a></li>
                 <li onclick="hideSideBar()">
-                  <a href="#" class="mobile-dropdown"
+                  <a href="#Services">Services</a>
+                </li>
+                <li onclick="hideSideBar()">
+                  <a href="#Blog" class="mobile-dropdown"
                     >Blog
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +85,7 @@
                   </ul>
                 </li>
                 <li onclick="hideSideBar()">
-                  <a href="#" class="mobile-dropdown"
+                  <a href="#Pages" class="mobile-dropdown"
                     >Pages
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -118,9 +121,9 @@
           </div>
           <nav>
             <ul class="nav-links">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
+              <li><a href="#Home">Home</a></li>
+              <li><a href="#bio">About</a></li>
+              <li><a href="#services">Services</a></li>
 
               <!-- Blog Dropdown -->
               <li class="select">
@@ -166,14 +169,16 @@
                 </div>
               </li>
 
-              <li><a href="#">Contact</a></li>
+              <li><a href="#footer">Contact</a></li>
               <li><button class="hire-btn">Hire Me</button></li>
+              <li><img style="width: 25px" src="images/Search.svg" /></li>
+              <li><img style="width: 25px" src="images/moon.png" /></li>
             </ul>
           </nav>
         </div>
       </header>
 
-      <section class="hero">
+      <section id="Home" class="hero">
         <div class="hero-text">
           <h1>Hi, I'm John Watson</h1>
           <h2><span class="highlight">Web Dev</span></h2>
@@ -190,6 +195,25 @@
         <div class="hero-image">
           <img src="images/watson.png" alt="John Watson" />
         </div>
+        <div class="sidebarr">
+          <i class="fas fa-angle-double-right"></i>
+          <div class="separator"></div>
+
+          <a href="#" class="menuu-item">
+            <i class="fas fa-arrow-left"></i>
+            Back
+          </a>
+
+          <a href="#" class="menuu-item">
+            <i class="fas fa-download"></i>
+            Download
+          </a>
+
+          <a href="#" class="menuu-item">
+            <i class="fas fa-shopping-cart"></i>
+            Buy
+          </a>
+        </div>
       </section>
     </div>
 
@@ -197,42 +221,42 @@
     <section id="bio" class="bio">
       <div class="bio-content">
         <div class="bio-image">
-          <img
-            src="https://images.pexels.com/photos/3585001/pexels-photo-3585001.jpeg?auto=compress&cs=tinysrgb&w=600"
-            alt="profile picture"
-          />
+          <img src="images/watson.png" alt="profile picture" />
         </div>
         <div class="bio-text">
-          <h1>MY BIOGRAPHY-PLP GROUP-761</h1>
-          <p class="lead">A Lead UI Designer & Web Developer Based In UK</p>
+          <h1>MY BIOGRAPHY</h1>
+          <p class="lead">A Lead UI Designer & Web Developer Based In Kenya</p>
           <p>
-            I love Graphic design and Photography and i have been working on my
-            porfolio from this year on feb 2025.I can give your business a new
-            creative start away. contact me and we will discuss on your project.
+            I love Graphic design and Photography and have been working on my
+            portfolio since 2016. I Can give your business a new Creative start
+            right away! Contact me and we will discuss your projects!
           </p>
 
           <div class="bio-details">
-            <div class="detail-item">
-              <i class="fas fa-user"></i>
-              <span>Margaret Gitau,Nzyoka,kikieh,Erick,</span>
-            </div>
+            <div>
+              <div class="detail-item">
+                <i class="fas fa-user"></i>
+                <span>John Watson</span>
+              </div>
 
-            <div class="detail-item">
-              <i class="fas fa-envelope"></i>
-              <span
-                ><a href="mailto:gitaumarggy@gmail.com" class="email-link"
-                  >gitaumarggy@gmail.com</a
-                ></span
-              >
+              <div class="detail-item">
+                <i class="fas fa-envelope"></i>
+                <span
+                  ><a href="mailto:gitaumarggy@gmail.com" class="email-link"
+                    >johnwatson@gmail.com</a
+                  ></span
+                >
+              </div>
             </div>
-
-            <div class="detail-item">
-              <i class="fas fa-phone"></i>
-              <span>+254 742 617804</span>
-            </div>
-            <div class="detail-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Nairobi, Kenya</span>
+            <div>
+              <div class="detail-item">
+                <i class="fas fa-phone"></i>
+                <span>+254 700000000</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Nairobi, Kenya</span>
+              </div>
             </div>
           </div>
 
@@ -252,7 +276,7 @@
             ></a>
           </div>
           <div class="bio-buttons">
-            <a href="#" class="btn hire-btn">hire me</a>
+            <a href="#" class="btn hiree-btn">hire me</a>
             <a href="#" class="btn download-btn">download cv</a>
           </div>
         </div>
@@ -387,10 +411,130 @@
       </div>
     </section>
     <!--End of skills section-->
+    <!-- section5 -->
+    <section class="services-section">
+      <div class="services-container">
+        <div class="services-grid">
+          <div class="service">
+            <div class="service-content">
+              <p class="icon">🌐</p>
+              <div class="text">
+                <h3>Web Development</h3>
+                <p>
+                  We build fast, secure, and scalable websites tailored to your
+                  business goals. Our solutions focus on seamless user
+                  experiences, responsive design, and best-in-class coding
+                  practices to maximize performance and growth.
+                </p>
+              </div>
+            </div>
+          </div>
 
+          <div class="service">
+            <div class="service-content">
+              <p class="icon">🎨</p>
+              <div class="text">
+                <h3>Design Trends</h3>
+                <p>
+                  We stay ahead of the curve by incorporating the latest design
+                  trends into your projects. From modern minimalism to bold,
+                  dynamic interfaces, we ensure your brand remains visually
+                  appealing and relevant.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="service-content">
+              <p class="icon">📈</p>
+              <div class="text">
+                <h3>Research & Analysis</h3>
+                <p>
+                  Our detailed research and market analysis provide the
+                  foundation for every successful project. We study user
+                  behavior, industry benchmarks, and competitor insights to
+                  craft strategies that deliver measurable results.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="service-content">
+              <p class="icon">🎧</p>
+              <div class="text">
+                <h3>Customer Support</h3>
+                <p>
+                  We offer dedicated customer support to ensure smooth
+                  communication and project success. Our team is committed to
+                  resolving issues quickly, answering your questions, and
+                  providing guidance at every step.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="service-content">
+              <p class="icon">📱</p>
+              <div class="text">
+                <h3>Responsive Design</h3>
+                <p>
+                  We create websites and applications that look and function
+                  perfectly across all devices. Whether on mobile, tablet, or
+                  desktop, your audience will enjoy an optimized and consistent
+                  experience.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="service-content">
+              <p class="icon">🖼️</p>
+              <div class="text">
+                <h3>PSD Design</h3>
+                <p>
+                  Our PSD design services deliver clean, layered, and
+                  pixel-perfect layouts ready for development. We translate your
+                  brand vision into professional design assets that maintain
+                  usability and aesthetic appeal.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-image">
+        <img src="images/watson.png" alt="Profile" />
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="stats-container">
+        <div class="stat">
+          <span class="number" data-target="135">0</span>
+          <p>Finished Projects</p>
+        </div>
+        <div class="stat">
+          <span class="number" data-target="225">0</span>
+          <p>Working Hours</p>
+        </div>
+        <div class="stat">
+          <span class="number" data-target="115">0</span>
+          <p>Online Support</p>
+        </div>
+        <div class="stat">
+          <span class="number" data-target="272">0</span>
+          <p>Happy Customers</p>
+        </div>
+      </div>
+    </section>
     <!--my success section-->
     <section class="success-work">
-      <h2 style="color: black;">My Success Work</h2>
+      <h2 style="color: black">My Success Work</h2>
       <div class="gallery">
         <img
           src="https://images.pexels.com/photos/5077049/pexels-photo-5077049.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -441,22 +585,24 @@
     </section>
 
     <!--footer section-->
-    <footer>
+    <footer id="footer">
+      <h3>UI Portfolio</h3>
       <div class="footer-content">
-        <h3>UI Portfolio</h3>
+        <p><i class="fa-solid fa-phone"></i> +254700000000 |</p>
         <p>
-          <i class="fa-solid fa-phone"></i> +254791609876 |
-          <i class="fa-solid fa-envelope"></i> kinyamunene.official@gmail.com |
+          <i class="fa-solid fa-envelope"></i> johnwatson.official@gmail.com |
+        </p>
+        <p>
           <i class="fa-solid fa-location-dot"></i> 230 Avenue Street, UK - 12431
         </p>
       </div>
       <div class="copyright-content">
         <p class="copyright">© 2025 UI Portfolio. All Rights Reserved.</p>
         <p class="social-icons">
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-google-plus"></i>
-          <i class="fa-brands fa-pinterest"></i>
+          <i id="icon" class="fa-brands fa-facebook"></i>
+          <i id="icon" class="fa-brands fa-twitter"></i>
+          <i id="icon" class="fa-brands fa-google-plus"></i>
+          <i id="icon" class="fa-brands fa-pinterest"></i>
         </p>
         <p><i class="fa-solid fa-turn-up"></i></p>
       </div>
