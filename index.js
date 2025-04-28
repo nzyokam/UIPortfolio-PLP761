@@ -112,3 +112,43 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+// Function to show sidebar
+function showSideBar() {
+    const sidebar = document.getElementById('bar');
+    sidebar.classList.add('active');
+    
+    // Add stagger animation to menu items
+    const menuItems = document.querySelectorAll('.menu li');
+    menuItems.forEach((item, index) => {
+      setTimeout(() => {
+        item.classList.add('stagger');
+      }, 100 * index);
+    });
+  }
+  
+  // Function to hide sidebar
+  function hideSideBar() {
+    const sidebar = document.getElementById('bar');
+    sidebar.classList.remove('active');
+    
+    // Remove stagger animation
+    const menuItems = document.querySelectorAll('.menu li');
+    menuItems.forEach(item => {
+      item.classList.remove('stagger');
+    });
+  }
+  
+  // Toggle mobile dropdowns
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
+    
+    mobileDropdowns.forEach(dropdown => {
+      dropdown.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        this.classList.toggle('active');
+      });
+    });
+  });

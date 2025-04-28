@@ -4,224 +4,462 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UIPortfolio-PLP761</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/hero.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
-   
     <div class="container">
-    <header class="navbar">
-      <div class="logo">
-        <img src="images/logo.png"/><p>UI Portfolio</p>
-    </div>
-      <nav>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-          
-<!-- Blog Dropdown -->
-<li class="select">
-    <div class="selected">
-      Blog
-      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" class="arrow">
-        <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
-      </svg>
-    </div>
-    <div class="options">
-      <div class="option">Latest Posts</div>
-      <div class="option">Categories</div>
-      <div class="option">Single Post</div>
-    </div>
-  </li>
+      <header>
+        <div class="nav-small-devices">
+          <div class="hamburger">
+            <div class="logo">
+              <img src="images/logo.png" />
+              <p>UI Portfolio</p>
+            </div>
 
-  <!-- Pages Dropdown -->
-  <li class="select">
-    <div class="selected">
-      Pages
-      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" class="arrow">
-        <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
-      </svg>
-    </div>
-    <div class="options">
-      <div class="option">About Me</div>
-      <div class="option">Portfolio</div>
-      <div class="option">FAQ</div>
-    </div>
-  </li>
-          
-            <li><a href="#">Contact</a></li>
-            <li><button class="hire-btn">Hire Me</button></li>
-          </ul>
-          
-      </nav>
-    </header>
+            <div>
+              <button onclick="showSideBar()" class="hamburger-button">
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect x="3" y="6" width="18" height="2" fill="white" />
+                  <rect x="3" y="15" width="18" height="2" fill="white" />
+                </svg>
+              </button>
+            </div>
+          </div>
 
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Hi, I'm John Watson</h1>
-        <h2><span class="highlight">Web Dev</span></h2>
-        <p>
-          I love Graphic design and Photography and have been working on my
-          portfolio since 2016. I can give your business a new Creative start
-          right away!
-        </p>
-        <div class="hero-buttons">
-          <button class="hire-me">Hire Me</button>
-          <button class="portfolio">My Portfolio</button>
+          <!-- Mobile Sidebar Menu -->
+          <nav id="bar" class="sidebar">
+            <div class="logo-sidebar">
+              <img src="images/logo.png" alt="Logo" />
+              <p>UI Portfolio</p>
+            </div>
+            <button onclick="hideSideBar()" class="close-button" type="button">
+              <img src="images/icon-close.svg" alt="Close Button" />
+            </button>
+            <div class="menu">
+              <ul>
+                <li onclick="hideSideBar()"><a href="#">Home</a></li>
+                <li onclick="hideSideBar()"><a href="#">About</a></li>
+                <li onclick="hideSideBar()"><a href="#">Services</a></li>
+                <li onclick="hideSideBar()">
+                  <a href="#" class="mobile-dropdown"
+                    >Blog
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="1em"
+                      viewBox="0 0 512 512"
+                      class="arrow"
+                    >
+                      <path
+                        d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <ul class="mobile-submenu">
+                    <li><a href="#">Latest Posts</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Single Post</a></li>
+                  </ul>
+                </li>
+                <li onclick="hideSideBar()">
+                  <a href="#" class="mobile-dropdown"
+                    >Pages
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="1em"
+                      viewBox="0 0 512 512"
+                      class="arrow"
+                    >
+                      <path
+                        d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <ul class="mobile-submenu">
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">FAQ</a></li>
+                  </ul>
+                </li>
+                <li onclick="hideSideBar()"><a href="#">Contact</a></li>
+                <li onclick="hideSideBar()">
+                  <button class="hire-btn">Hire Me</button>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </div>
-      </div>
-      <div class="hero-image">
-        <img src="images/watson.png" alt="John Watson" />
-      </div>
-    </section></div>
+
+        <!-- Large Devices NavBar -->
+        <div class="navbar">
+          <div class="logo">
+            <img src="images/logo.png" />
+            <p>UI Portfolio</p>
+          </div>
+          <nav>
+            <ul class="nav-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+
+              <!-- Blog Dropdown -->
+              <li class="select">
+                <div class="selected">
+                  Blog
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    viewBox="0 0 512 512"
+                    class="arrow"
+                  >
+                    <path
+                      d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="options">
+                  <div class="option">Latest Posts</div>
+                  <div class="option">Categories</div>
+                  <div class="option">Single Post</div>
+                </div>
+              </li>
+
+              <!-- Pages Dropdown -->
+              <li class="select">
+                <div class="selected">
+                  Pages
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    viewBox="0 0 512 512"
+                    class="arrow"
+                  >
+                    <path
+                      d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="options">
+                  <div class="option">About Me</div>
+                  <div class="option">Portfolio</div>
+                  <div class="option">FAQ</div>
+                </div>
+              </li>
+
+              <li><a href="#">Contact</a></li>
+              <li><button class="hire-btn">Hire Me</button></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Hi, I'm John Watson</h1>
+          <h2><span class="highlight">Web Dev</span></h2>
+          <p>
+            I love Graphic design and Photography and have been working on my
+            portfolio since 2016. I can give your business a new Creative start
+            right away!
+          </p>
+          <div class="hero-buttons">
+            <button class="hire-me">Hire Me</button>
+            <button class="portfolio">My Portfolio</button>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="images/watson.png" alt="John Watson" />
+        </div>
+      </section>
+    </div>
+
     <!-- Biography section -->
-    <section id="bio" class ="bio">
+    <section id="bio" class="bio">
       <div class="bio-content">
-      <div class="bio-image">
-          <img src="https://images.pexels.com/photos/3585001/pexels-photo-3585001.jpeg?auto=compress&cs=tinysrgb&w=600" alt="profile picture">
-      </div>
-     <div class="bio-text">
-         <h1>MY BIOGRAPHY-PLP GROUP-761</h1>
-      <p class="lead">A Lead UI Designer & Web Developer Based In UK</p>
-      <p>
-        I love Graphic design and Photography and i have been working on my porfolio from this year on feb 2025.I can give your business a new creative start away. contact me and we will discuss on your project.</p> 
-  
-        <div class="bio-details">
-          <div class="detail-item">
+        <div class="bio-image">
+          <img
+            src="https://images.pexels.com/photos/3585001/pexels-photo-3585001.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="profile picture"
+          />
+        </div>
+        <div class="bio-text">
+          <h1>MY BIOGRAPHY-PLP GROUP-761</h1>
+          <p class="lead">A Lead UI Designer & Web Developer Based In UK</p>
+          <p>
+            I love Graphic design and Photography and i have been working on my
+            porfolio from this year on feb 2025.I can give your business a new
+            creative start away. contact me and we will discuss on your project.
+          </p>
+
+          <div class="bio-details">
+            <div class="detail-item">
               <i class="fas fa-user"></i>
               <span>Margaret Gitau,Nzyoka,kikieh,Erick,</span>
-          </div>
+            </div>
 
-
-          <div class="detail-item">
+            <div class="detail-item">
               <i class="fas fa-envelope"></i>
-              <span><a href="mailto:gitaumarggy@gmail.com" class="email-link">gitaumarggy@gmail.com</a></span>
-          </div>
+              <span
+                ><a href="mailto:gitaumarggy@gmail.com" class="email-link"
+                  >gitaumarggy@gmail.com</a
+                ></span
+              >
+            </div>
 
-          <div class="detail-item">
+            <div class="detail-item">
               <i class="fas fa-phone"></i>
               <span>+254 742 617804</span>
-          </div>
-          <div class="detail-item">
+            </div>
+            <div class="detail-item">
               <i class="fas fa-map-marker-alt"></i>
               <span>Nairobi, Kenya</span>
+            </div>
           </div>
+
+          <div class="social-links">
+            <p>follow me on:</p>
+            <a href="https://www.instagram.com/margg.y" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://github.com/Gitaumarggy" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/margaret-gitau" target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="https://twitter.com/MargaretGitau1" target="_blank"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </div>
+          <div class="bio-buttons">
+            <a href="#" class="btn hire-btn">hire me</a>
+            <a href="#" class="btn download-btn">download cv</a>
+          </div>
+        </div>
       </div>
-      
-      <div class="social-links">
-        <p>follow me on:</p>
-          <a href="https://www.instagram.com/margg.y" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://github.com/Gitaumarggy" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/margaret-gitau" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://twitter.com/MargaretGitau1" target="_blank"><i class="fab fa-twitter"></i></a>
-      </div>
- <div class="bio-buttons">
-      <a href="#" class="btn hire-btn">hire me</a>
-      <a href="#" class="btn download-btn">download cv</a>
-  </div>
-  </div>
-  </div>
-  </section>
-  <!-- end of biography section  -->
- 
+    </section>
+    <!-- end of biography section  -->
 
-
-<!-- Services Section -->
-<section id="services" class="services section">
-<div class="container2">
-
-  <div class="section-title text-center mb-5">
-    <h2>What I Do For You</h2>
-  </div>
-
-  <div class="row gy-4 justify-content-center">
-
-    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-      <div class="service-card">
-        <i class="bi bi-laptop"></i>
-        <h3>Web Development</h3>
-        <p>I create responsive, SEO-optimized, and user-friendly websites tailored to your brand's needs. From personal portfolios to full e-commerce platforms, I ensure speed, security, and great design for every project.</p>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-      <div class="service-card">
-        <i class="bi bi-phone"></i>
-        <h3>App Development</h3>
-        <p>I design and develop custom mobile applications for Android and iOS using modern technologies. Whether it’s a business app, a social network, or a utility tool, I focus on delivering seamless performance and clean user experiences.</p>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-      <div class="service-card">
-        <i class="bi bi-camera"></i>
-        <h3>Photography</h3>
-        <p>I offer professional photography services for events, personal branding, and product shoots. Capturing authentic moments with high-quality equipment and creative techniques to bring your vision to life.</p>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="text-center mt-4">
-    <a href="#" class="more-services">More Services ➔</a>
-  </div>
-
-</div>
-</section>
-<!-- End Services Section -->
-
-<!--Skill section-->
- <section class="skills-section" style="display: flex; align-items:center; justify-content:center;">
-  <div class="container-4">
-    <div class="left-section" style="margin-bottom: 40px;">
-        <img src="https://images.pexels.com/photos/31131434/pexels-photo-31131434/free-photo-of-scenic-view-from-mediterranean-window.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Mediterranean window view" class="top-image">
-        <img src="https://images.pexels.com/photos/16747471/pexels-photo-16747471/free-photo-of-sheds-in-tropical-forest-on-sea-shore.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Image 2" class="bottom-image">
-    </div>
-
-    
-    <div class="right-section">
-        <h5>MY SKILLS</h5>
-        <h1 style="color: black; ">My Featured Skills</h1><br>
-        <p style="color: grey; margin-bottom:30px;">I specialize in Branding and Strategy, and am passionate about<br> creating awesome portfolio work. I am always ready to impress the<br> audience with my creativity.</p>
-
-        <div class="skill">
-            <p style="color: gray;">UI/UX Design</p>
-            <div class="skill-bar">
-                <div class="skill-level" style="width: 70%;"></div>
-            </div>
+    <!-- Services Section -->
+    <section id="services" class="services section">
+      <div class="container2">
+        <div class="section-title text-center mb-5">
+          <h2>What I Do For You</h2>
         </div>
 
-        <div class="skill">
-            <p style="color: grey;">Ideas & Technology</p>
-            <div class="skill-bar">
-                <div class="skill-level" style="width: 90%;"></div>
+        <div class="row gy-4 justify-content-center">
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="service-card">
+              <i class="bi bi-laptop"></i>
+              <h3>Web Development</h3>
+              <p>
+                I create responsive, SEO-optimized, and user-friendly websites
+                tailored to your brand's needs. From personal portfolios to full
+                e-commerce platforms, I ensure speed, security, and great design
+                for every project.
+              </p>
             </div>
+          </div>
+
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="service-card">
+              <i class="bi bi-phone"></i>
+              <h3>App Development</h3>
+              <p>
+                I design and develop custom mobile applications for Android and
+                iOS using modern technologies. Whether it’s a business app, a
+                social network, or a utility tool, I focus on delivering
+                seamless performance and clean user experiences.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="service-card">
+              <i class="bi bi-camera"></i>
+              <h3>Photography</h3>
+              <p>
+                I offer professional photography services for events, personal
+                branding, and product shoots. Capturing authentic moments with
+                high-quality equipment and creative techniques to bring your
+                vision to life.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div class="skill">
-            <p style="color: grey;">Branding Design</p>
-            <div class="skill-bar">
-                <div class="skill-level" style="width: 60%;"></div>
-            </div>
+        <div class="text-center mt-4">
+          <a href="#" class="more-services">More Services ➔</a>
+        </div>
+      </div>
+    </section>
+    <!-- End Services Section -->
+
+    <!--Skill section-->
+    <section
+      class="skills-section"
+      style="display: flex; align-items: center; justify-content: center"
+    >
+      <div class="container-4">
+        <div class="left-section" style="margin-bottom: 40px">
+          <img
+            src="https://images.pexels.com/photos/31131434/pexels-photo-31131434/free-photo-of-scenic-view-from-mediterranean-window.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+            alt="Mediterranean window view"
+            class="top-image"
+          />
+          <img
+            src="https://images.pexels.com/photos/16747471/pexels-photo-16747471/free-photo-of-sheds-in-tropical-forest-on-sea-shore.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+            alt="Image 2"
+            class="bottom-image"
+          />
         </div>
 
-        <div class="skill">
-            <p style="color: grey;">Responsive Web Design</p>
+        <div class="right-section">
+          <h5>MY SKILLS</h5>
+          <h1 style="color: black">My Featured Skills</h1>
+          <br />
+          <p style="color: grey; margin-bottom: 30px">
+            I specialize in Branding and Strategy, and am passionate about<br />
+            creating awesome portfolio work. I am always ready to impress the<br />
+            audience with my creativity.
+          </p>
+
+          <div class="skill">
+            <p style="color: gray">UI/UX Design</p>
             <div class="skill-bar">
-                <div class="skill-level" style="width: 85%;"></div>
+              <div class="skill-level" style="width: 70%"></div>
             </div>
+          </div>
+
+          <div class="skill">
+            <p style="color: grey">Ideas & Technology</p>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 90%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <p style="color: grey">Branding Design</p>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 60%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <p style="color: grey">Responsive Web Design</p>
+            <div class="skill-bar">
+              <div class="skill-level" style="width: 85%"></div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+    <!--End of skills section-->
 
-    </div>
-</div>
+    <!--my success section-->
+    <section class="success-work">
+      <h2>My Success Work</h2>
+      <div class="gallery">
+        <img
+          src="https://images.pexels.com/photos/5077049/pexels-photo-5077049.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="Work 1"
+        />
+        <img
+          src="https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="Work 2"
+        />
+        <img
+          src="https://images.pexels.com/photos/1714341/pexels-photo-1714341.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="Work 3"
+        />
+        <img
+          src="https://images.pexels.com/photos/162622/facebook-login-office-laptop-business-162622.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="Work 4"
+        />
+        <img
+          src="https://images.pexels.com/photos/3584998/pexels-photo-3584998.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="Work 5"
+        />
+        <img
+          src="https://images.pexels.com/photos/270632/pexels-photo-270632.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="Work 6"
+        />
+      </div>
+    </section>
 
- </section>
- <!--End of skills section-->
+    <section class="green-banner">
+      <div class="icons">
+        <img
+          src="https://cdn-icons-png.freepik.com/256/4876/4876700.png?ga=GA1.1.416789230.1745768943&semt=ais_hybrid"
+          alt="Badge 1"
+        />
+        <img
+          src="https://cdn-icons-png.freepik.com/256/12595/12595958.png?ga=GA1.1.416789230.1745768943&semt=ais_hybrid"
+          alt="Badge 2"
+        />
+        <img
+          src="https://cdn-icons-png.freepik.com/256/4587/4587981.png?ga=GA1.1.416789230.1745768943&semt=ais_hybrid"
+          alt="Badge 3"
+        />
+        <img
+          src="https://cdn-icons-png.freepik.com/256/6889/6889429.png?ga=GA1.1.416789230.1745768943&semt=ais_hybrid"
+          alt="Badge 4"
+        />
+      </div>
+    </section>
 
-
+    <!--footer section-->
+    <footer>
+      <div class="footer-content">
+        <h3>UI Portfolio</h3>
+        <p>
+          <i class="fa-solid fa-phone"></i> +254791609876 |
+          <i class="fa-solid fa-envelope"></i> kinyamunene.official@gmail.com |
+          <i class="fa-solid fa-location-dot"></i> 230 Avenue Street, UK - 12431
+        </p>
+      </div>
+      <div class="copyright-content">
+        <p class="copyright">© 2025 UI Portfolio. All Rights Reserved.</p>
+        <p class="social-icons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-google-plus"></i>
+          <i class="fa-brands fa-pinterest"></i>
+        </p>
+        <p><i class="fa-solid fa-turn-up"></i></p>
+      </div>
+    </footer>
 
     <script src="index.js"></script>
   </body>
