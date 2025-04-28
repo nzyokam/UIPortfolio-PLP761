@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    color: #fff;
+  }
+
+  /* Biography Section Styling */
+.bio {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+  width:100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.bio-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  gap: 50px;
+}
+.bio-image-container {
+  flex: 1;
+  min-width: 300px;
+  padding-left: 5cm; /* 5cm left margin */
+  box-sizing: border-box;
+}
+
+.bio-image {
+  width: 100%;
+  max-width: 400px;
+  
+}
+
+.bio-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.bio-text {
+      flex: 1;
+      min-width: 300px;
+      padding: 0 40px;
+      box-sizing: border-box;
+}
+
+.bio-text h1 {
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-transform:uppercase ;
+}
+
+
+
+.bio-text .lead {
+  font-size: 1.2rem;
+  color: black;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.bio-text p {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.bio-details {
+  margin-bottom: 30px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  color: #4a5568;
+  font-size: 1rem;
+}
+
+.detail-item i {
+  width: 30px;
+  color: green;
+  font-size: 1.1rem;
+  margin-right: 10px;
+}
+.email-link {
+  color:blue;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.email-link:hover {
+  color: #4e54c8;
+  text-decoration: underline;
+}
+
+.social-link {
+  margin-bottom: 30px;
+}
+
+
+.social-link p {
+  color: #4a5568;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 50%;
+  color: #4a5568;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.social-links a:hover {
+  background: burlywood;
+  color: white;
+  transform: translateY(-3px);
+}
+
+.bio-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.hire-btn {
+  background: green;
+  color: white;
+}
+
+.hire-btn:hover {
+  background:#004d40;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(78, 84, 200, 0.3);
+}
+
+.download-btn {
+  background: lightgreen;
+  color:green;
+  border: 1px solid green;
+}
+
+.download-btn:hover {
+  background: #f0f1ff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(78, 84, 200, 0.1);
+}
+
+@media (max-width: 768px) {
+  .bio-content {
+      flex-direction: column;
+  }
+  
+  .bio-image, .bio-text {
+      min-width: 100%;
+  }
+  
+  .bio-text h1 {
+      font-size: 2rem;
+  }
+  
+  .bio-text h2 {
+      font-size: 1.3rem;
+  }
+  
+  .bio-buttons {
+      flex-direction: column;
+  }
+}
+
+/* === Services Section Styling === */
+.services {
+  padding: 60px 0;
+  background: #f8f9fa; /* light gray background like in your image */
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.section-title h2 {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.service-card {
+  background: #fff;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 40px 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: all 0.5s ease;
+  width: 300px; /* fixed width for each card */
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+.service-card i {
+  font-size: 45px;
+  color: #00796b; /* dark greenish icon color */
+  margin-bottom: 20px;
+  transition: color 0.2s ease;
+  display: inline-block;
+}
+
+.service-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  transition:color 0.2s ease;
+  color: #333;
+}
+
+.service-card p {
+  font-size: 16px;
+  color: #666;
+  transition:color 0.2s ease;
+  line-height: 1.6;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.more-services {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #00796b;
+  text-decoration: none;
+  transition: 0.3s;
+  text-align: center; /* Ensure the link text is centered */
+}
+
+.more-services:hover {
+  font-weight:bold ;
+  background: #e0f2f1; /* light green background on hover */
+  font-size: 20px;
+  color: #004d40; /* darker green on hover */
+}
+
+/* skill section */
+.skills-section #services {
+  gap:60px;
+}
+.container-4  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  gap: 40px;
+  
+}
+
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.top-image {
+  width: 300px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 3px;
+  margin-bottom: 43px; /* padding bottom */
+}
+
+.bottom-image {
+  width: 300px;
+  height: 308px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.right-section {
+  flex: 1;
+}
+
+.right-section h5 {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.right-section h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.text-content {
+  margin-top: 20px;
+}
+
+.text-content p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #808080;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill p {
+  margin: 0 0 5px 0;
+}
+
+.skill-bar {
+  width: 100%;
+  background-color: #eee;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-level {
+  height: 100%;
+  background-color: #2d7a3c;
+}
+
+
+
+/* Responsive - Stack cards on small screens */
+@media (max-width: 992px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 90%;
+  }
+}
