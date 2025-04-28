@@ -102,6 +102,8 @@
     padding: 10px 20px;
   }
   
+  /* mobile responsiveness*/
+  
   @media (max-width: 767px) {
     .gallery {
         grid-template-columns: 1fr; 
