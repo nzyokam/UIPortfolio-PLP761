@@ -7,13 +7,19 @@ This project aimed to create a clean, modern, and responsive portfolio website. 
 ## 🧩 1. Project Setup
 
 ├── index.html
+
+
 ├── index.js
+
+
 ├── /images
 │   ├── logo.png
 │   ├── watson.png
 │   ├── Search.svg
 │   ├── icon-close.svg
 │   ├── moon.png
+
+
 ├── /css
 │   ├── hero.css
 |   ├── styles.css
